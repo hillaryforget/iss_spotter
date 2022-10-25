@@ -1,7 +1,4 @@
-// iss.js
-
 const request = require('request');
-
 /**
  * Makes a single API request to retrieve the user's IP address.
  * Input:
@@ -23,7 +20,6 @@ const fetchMyIP = function(callback) {
     callback(null, ip);
   });
 };
-
 /**
  * Makes a single API request to retrieve the lat/lng for a given IPv4 address.
  * Input:
@@ -55,7 +51,6 @@ const fetchCoordsByIP = function(ip, callback) {
     callback(null, {latitude, longitude});
   });
 };
-
 /**
  * Makes a single API request to retrieve upcoming ISS fly over times the for the given lat/lng coordinates.
  * Input:
@@ -84,7 +79,6 @@ const fetchISSFlyOverTimes = function(coords, callback) {
     callback(null, passes);
   });
 };
-
 /**
  * Orchestrates multiple API requests in order to determine the next 5 upcoming ISS fly overs for the user's current location.
  * Input:
@@ -115,7 +109,6 @@ const nextISSTimesForMyLocation = function(callback) {
     });
   });
 };
-
 // Only export nextISSTimesForMyLocation and not the other three (API request) functions.
 // This is because they are not needed by external modules.
 module.exports = { nextISSTimesForMyLocation };

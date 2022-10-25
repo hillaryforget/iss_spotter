@@ -1,5 +1,4 @@
 const { nextISSTimesForMyLocation } = require('./iss');
-
 /**
  * Input:
  *   Array of data objects defining the next fly-overs of the ISS.
